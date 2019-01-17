@@ -79,6 +79,7 @@ class Person {
     }
 
     public int calcIncome(){
+        if(age >= 20){
         if(IQ > 100 && IQ < 115){
             points = IQ - 100; /* Points above average for average people */
             if(Math.random() > 0.75){
@@ -109,7 +110,13 @@ class Person {
             } else if((bellCurve(100,25) > 60)){
             income = income + bellCurve(5505000,2500000);
             }
+        }   //age affecting income
+            }
+            else if(age > 15 && age < 20){
+                income = bellCurve(10000,2000);
+            } else if(age < 15){
+                income = 0;
+            }
+            return income;
         }
-        return income;
-    }
 }
