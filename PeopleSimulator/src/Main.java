@@ -22,7 +22,7 @@ class Main {
           }
           //Write your print/tests below if they involve a property of the people in peopleTown
           //use individual as it does in the example above
-
+          System.out.println(individual.getName() + "'s Income: " + individual.calcIncome());
 
 
       }
