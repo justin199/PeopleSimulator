@@ -148,10 +148,8 @@ class Person {
                 income = bellCurve(10000,2000);
             } else if(age < 15){
                 income = 0;
-            } else if(income < 0){
-                income = 0;
             }
-            return income;
+            return Math.abs(income);
         }
     public String getPlace(){
          return this.place;
